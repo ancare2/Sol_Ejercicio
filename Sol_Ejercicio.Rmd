@@ -56,3 +56,31 @@ commonAnimals <- intersect(rownames(mammals), rownames(Animals2))
 commonAnimals
 ```
 
+e)
+
+```{r}
+animalsInMammals <- rownames(mammals)
+animalsInAnimals2 <- rownames(Animals2)
+
+# Animales que están en mammals pero no en Animals2
+animalsOnlyInMammals <- setdiff(animalsInMammals, animalsInAnimals2)
+
+# Animales que están en Animals2 pero no en mammals
+animalsOnlyInAnimals2 <- setdiff(animalsInAnimals2, animalsInMammals)
+
+# Número de animales en cada categoría
+numAnimalsOnlyInMammals <- length(animalsOnlyInMammals)
+numAnimalsOnlyInAnimals2 <- length(animalsOnlyInAnimals2)
+
+cat("Animales en mammals pero no en Animals2:\n")
+cat(animalsOnlyInMammals, sep = ', ')
+
+cat("\n\nAnimales en Animals2 pero no en mammals:\n")
+cat(animalsOnlyInAnimals2, sep = ', ')
+
+cat("\n\nNúmero de animales en mammals pero no en Animals2:", numAnimalsOnlyInMammals)
+cat("\nNúmero de animales en Animals2 pero no en mammals:", numAnimalsOnlyInAnimals2)
+
+```
+
+

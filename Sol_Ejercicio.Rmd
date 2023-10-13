@@ -36,3 +36,15 @@ head(Animals2)
 tail(Animals2)  
 str(Animals2)  
 ```
+
+c)
+
+```{r}
+rownames(mammals)
+colnames(mammals)
+```
+
+```{r}
+rownames(Animals2)
+colnames(Animals2)
+```

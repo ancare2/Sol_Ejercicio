@@ -102,4 +102,4 @@ cat("Animales que no aparecen en ambos conjuntos:\n")
 cat(animalsNotInBoth, sep = ', ')
 
 ```
-
+El ejercicio ha sido finalizado

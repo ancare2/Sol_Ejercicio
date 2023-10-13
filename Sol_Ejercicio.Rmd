@@ -83,4 +83,23 @@ cat("\nNúmero de animales en Animals2 pero no en mammals:", numAnimalsOnlyInAni
 
 ```
 
+f)
+
+```{r}
+animalsInMammals <- rownames(mammals)
+animalsInAnimals2 <- rownames(Animals2)
+
+# Animales que están en mammals pero no en Animals2
+animalsOnlyInMammals <- setdiff(animalsInMammals, animalsInAnimals2)
+# Animales que están en Animals2 pero no en mammals
+animalsOnlyInAnimals2 <- setdiff(animalsInAnimals2, animalsInMammals)
+
+# Combinar las dos listas para obtener los animales que no aparecen en ambos conjuntos
+animalsNotInBoth <- union(animalsOnlyInMammals, animalsOnlyInAnimals2)
+
+# Mostrar la lista de animales que no aparecen en ambos conjuntos
+cat("Animales que no aparecen en ambos conjuntos:\n")
+cat(animalsNotInBoth, sep = ', ')
+
+```
 
